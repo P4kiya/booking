@@ -72,3 +72,7 @@ Route::get('/reservation/delete/{id}', [ReservationsController::class, 'deleteRe
 Route::get('/view-reservation/{id}', [ReservationsController::class, 'ViewReservations'])->name('view_reservation')->middleware('checkuser');
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
